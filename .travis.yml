@@ -10,6 +10,7 @@ before_script:
 - psql -c 'create database blog_test;' -U postgres
 script: bundle exec rails t
 deploy:
+  provider: heroku
   app: namelos-blog
   run: "rails db:migrate"
   api_key:
