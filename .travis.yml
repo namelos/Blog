@@ -8,4 +8,4 @@ before_script:
 test:
   adapter: postgresql
   database: travis_ci_test
-script: rails t
+script: bundle exec rails t
