@@ -1,11 +1,16 @@
 language: ruby
 rvm:
-  - "2.3.1"
+- 2.3.1
 services:
-  - postgresql
+- postgresql
 test:
   adapter: postgresql
   database: blog_test
 before_script:
-  - psql -c 'create database blog_test;' -U postgres
+- psql -c 'create database blog_test;' -U postgres
 script: bundle exec rails t
+deploy:
+  app: namelos-blog
+  run: "rails db:migrate"
+  api_key:
+    secure: btplQUeiC57TG+3yGByuFzRi6DnGOqUu6TlmvK0SqBtWl/StaO1HfU3p8RqDpaZ/X6iSnv1ZRMJyiIrgosgYj/r5L1aE4GoNGEIqf3lgo0mV3OdStspuqUMOzphwQkCEw8nKUkeWXJthcn0hGJ3es3HaOYsuONK+QxVJNOPWEk87a7ou0FSyg0OVho1QCPn/CtCSsmNCWpVWUvaPXLWf0yPYrd61JKVOEFMu8+emHfcdO16iCUDbl2ox2SsfH9A8N26RzD8oTl1EMjgDyThF5lo0NWga6swUZ2300tiulcqRXGLR0oyCgFeSnh5fnyauOx4XoDEDKZ4rELHeM6HHgK6utFKDrAzb0XIGidfj9dTsGazY+xQIwuBPWp4wPhO/xeVMjSSQ5GrhHeAdbFkRLdwcrz9ciFVe51cG+gNMj4GsYD+AU0c2KUicBjIXSNJBeLZHktEWV//7Z+bkE0F6XwdX2qPXFCtnTOsHZa0WD31YTWZK3EP7jkDE+thZUBb/xxtWttKb4f8kmO5medGQAeOTeK36FQ1yVXWie2DPvWlgH7JOLaO65AUS/J09s1H1b9dK1i/dS4VH6JV0rjlYnY0Q4YkHptiWs9IF5s5jm2rCgVrQgvcZsMLzbUtra0Ezes90+845h7E1iHWbF8NVX7doaqFp5wSsHZT9KReD9SU=
