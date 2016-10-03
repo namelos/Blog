@@ -21,3 +21,6 @@
 
 # credentials
 config/initializers/credential.rb
+
+# jetbrains
+.idea
