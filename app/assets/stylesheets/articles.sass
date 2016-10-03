@@ -4,20 +4,24 @@
 @import "colors"
 @import "mixins"
 
-.article
+.content
   +paper
   +sans
   margin: 150px 0
   padding: 50px
   width: 1000px
-  background: $blue-grey-50
+  min-height: 800px
+  background: $card-color
 
-  .article-title
+  .content-title
+    margin: 0
     font-size: 40px
-
-  a
-    color: $blue-grey-400
 
   th, td
     border-collapse: collapse
-    border-bottom: 1px solid $blue-grey-200
+    border-bottom: 1px solid $border-color
+
+  ul
+    font-size: 20px
+    list-style-type: none
+
