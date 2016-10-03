@@ -1,0 +1,23 @@
+// Place all the styles related to the Articles controller here.
+// They will automatically be included in application.css.sass.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "colors"
+@import "mixins"
+
+.article
+  +paper
+  +sans
+  margin: 150px 0
+  padding: 50px
+  width: 1000px
+  background: $blue-grey-50
+
+  .article-title
+    font-size: 40px
+
+  a
+    color: $blue-grey-400
+
+  th, td
+    border-collapse: collapse
+    border-bottom: 1px solid $blue-grey-200

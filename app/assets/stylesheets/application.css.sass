@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+
+@import "colors"
+@import "mixins"
+
+body
+  +center
+  +thin
+  background: $background-color
+
+  h1
+    font-weight: 500
+
+.container
+  +text
+

@@ -1,11 +1,15 @@
-<h1><%= @article.title %></h1>
+<section class="article">
+  <h1 class="article-title"><%= @article.title %></h1>
 
-<div class="org-mode">
-  <%= org(@article.text) %>
-</div>
+  <article class="org-mode">
+    <%= org(@article.text) %>
+  </article>
 
-<% if logged_in? %>
-  <%= link_to 'Edit', edit_article_path(@article) %>
-<% end %>
+  <% if logged_in? %>
+    <%= link_to 'Edit', edit_article_path(@article) %>
+  <% end %>
 
-<%= link_to 'Back', articles_path %>
+  <%= link_to 'Back', articles_path %>
+</section>
+
+
