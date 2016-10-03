@@ -16,4 +16,8 @@
 # Ignore Byebug command history file.
 .byebug_history
 
+# emacs
+.#*
+
+# credentials
 config/initializers/credential.rb
