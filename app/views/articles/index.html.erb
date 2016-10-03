@@ -1,20 +1,12 @@
-<table>
-  <tr>
-    <th>Namelos</th>
-  </tr>
+<section>
+  <h1>Namelos</h1>
 
-  <% @articles.each do |article| %>
-    <tr>
-      <td><%= link_to article.title, article_path(article) %></td>
-      <% if logged_in? %>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article_path(article),
-            method: :delete,
-            data: { confirm: 'Are you sure?' }%></td>
-      <% end %>
-    </tr>
-  <% end %>
-</table>
+  <ul>
+    <% @articles.each do |article| %>
+        <li><%= link_to article.title, article_path(article) %></li>
+    <% end %>
+  </ul>
+</section>
 
 <% if logged_in? %>
   <td><%= link_to 'New', new_article_path %></td>
